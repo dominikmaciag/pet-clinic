@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/")
-public class IndexController {
+@RequestMapping("/owners")
+public class OwnerController {
 
     @GetMapping
-    public String getIndex() {
-        return "index";
+    public String listOwners() {
+        return "owners/index";
     }
 }
