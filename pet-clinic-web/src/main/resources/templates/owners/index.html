@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="pl-PL" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
@@ -146,7 +146,23 @@
             <!-- Begin Page Content -->
             <div class="container-fluid">
 
-                <!-- TODO CODE -->
+
+             <table>
+               <thead>
+               <tr>
+                 <th>Id</th>
+                 <th>First Name</th>
+                 <th>Last Name</th>
+               </tr>
+               </thead>
+               <tbody>
+               <tr th:each="owner : ${owners}">
+                 <td th:text="${owner.id}"></td>
+                 <td th:text="${owner.firstName}"></td>
+                 <td th:text="${owner.lastName}"></td>
+               </tr>
+               </tbody>
+             </table>
 
 
             </div>
