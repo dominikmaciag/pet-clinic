@@ -1,7 +1,5 @@
 package com.springframework.petclinic.bootstrap;
 
-import com.springframework.petclinic.map.OwnerServiceMap;
-import com.springframework.petclinic.map.VetServiceMap;
 import com.springframework.petclinic.model.Owner;
 import com.springframework.petclinic.model.Vet;
 import com.springframework.petclinic.services.OwnerService;
@@ -15,9 +13,10 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
