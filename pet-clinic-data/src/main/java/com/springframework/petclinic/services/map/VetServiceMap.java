@@ -1,4 +1,4 @@
-package com.springframework.petclinic.map;
+package com.springframework.petclinic.services.map;
 
 import com.springframework.petclinic.model.Vet;
 import com.springframework.petclinic.services.VetService;
